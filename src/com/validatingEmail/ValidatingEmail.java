@@ -6,7 +6,7 @@ import java.util.regex.*;
 public class ValidatingEmail {
 	
 	public static String isValidEmailId(String emailId) {
-		String regex="^[a-zA-Z0-9]+(@bridgelabz.com)";
+		String regex="^[a-zA-Z0-9]+[@][a-zA-Z0-9]+(.com)";
 		Pattern pattern=Pattern.compile(regex);
 		if(pattern.matcher(emailId).matches())
 			return "correct";
