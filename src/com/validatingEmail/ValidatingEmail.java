@@ -6,7 +6,7 @@ import java.util.regex.*;
 public class ValidatingEmail {
 	
 	public static String isValidEmailId(String emailId) {
-		String regex="^[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}$";
+		String regex="^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)?[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}$";
 		Pattern pattern=Pattern.compile(regex);
 		if(pattern.matcher(emailId).matches())
 			return "correct";
